@@ -24,12 +24,12 @@ Two files are needed. Both come from Kaggle.
 | test.csv | 45,000 | 4 | No sales values. Predict these. |
 
 The four columns in train.csv are: `date`, `store`, `item`, `sales`.
-test.csv replaces `sales` with `id` — Kaggle uses that ID to match predictions.
+test.csv replaces `sales` with `id`.
 
 The data was split by year:
 - Train: 2013–2016 (730,500 rows)
 - Validation: 2017 (182,500 rows)
-- Kaggle test: January–March 2018 (45,000 rows)
+- Test: January–March 2018 (45,000 rows)
 
 ---
 
@@ -37,16 +37,16 @@ The data was split by year:
 
 The data is clean overall. One problem was found and fixed.
 
-**The zero sales row**
+**The zero sales row**:
 During the cleaning process there was one store that had zero sales. Every other store had normal sales that day, so the zero is a data entry error. It was replaced with the average sales of the day before and the day after.
 
-**Outliers**
+**Outliers**:
 11,967 rows were flagged by the IQR method as unusually high sales. These were kept. In retail, high sales days are common; factors such as promotions, holidays, or bulk orders are usually the cause. Removing them would make the model worse at predicting those days.
 
-**Rescaling**
+**Rescaling**:
 Rescaling was not applied. LightGBM splits data by asking if a value is above or below a certain threshold, so it doesn't care if one feature ranges from 1–10 and another from 1–365. I also skipped rescaling for Linear Regression since the feature ranges were similar enough to not cause any issues.
 
-**One-hot encoding**
+**One-hot encoding**:
 Store and item are category labels, not real numbers. Store 10 is not "10 times more" than store 1, they are just different locations. Linear Regression treats everything as a number, so store and item were one-hot encoded for that model using `pd.get_dummies()`. This adds 60 new columns,one per store and one per item each containing a 0 or 1. LightGBM handles category labels on its own, so no encoding was needed there.
 
 ---
@@ -153,8 +153,8 @@ pip install lightgbm
 ```
 ├── README.md                        — Overview
 ├── retail_demand_forecasting.ipynb  — Main notebook. All steps in one place:
-│                                      data loading, cleaning, visualization,
-│                                      model training, evaluation, submission.
+│                                      cleaning, visualization,
+│                                      model training, evaluation.
 
 ```
 
