@@ -6,7 +6,7 @@ Predicting daily sales for 50 items across 10 stores using the [Store Item Deman
 
 ## Overview
 
-The goal is simple: given 5 years of past sales, predict what will sell each day for the next 3 months. This is a regression problem the model outputs a number (daily sales count) rather than a category.
+The goal is simple: given 5 years of past sales, predict what will sell each day for the next 3 months.
 
 Two models were tested. Linear Regression is the baseline, it is the simplest model possible and shows what you get without any complexity. LightGBM is the main model, it is faster, more accurate, and better at finding patterns in real-world data.
 
