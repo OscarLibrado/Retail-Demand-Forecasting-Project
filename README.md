@@ -123,6 +123,10 @@ Settings used:
 | Linear Regression | 22.53% | Baseline. One-hot encoded. |
 | LightGBM | 12.78% | Main model. No encoding needed. |
 
+<img width="1222" height="880" alt="Image" src="https://github.com/user-attachments/assets/592b8c0c-f935-4a34-8ae9-faf646f8353a" />
+
+<img width="1224" height="874" alt="Image" src="https://github.com/user-attachments/assets/36cf9949-49cd-4f41-b435-9daa9ff02c32" />
+
 LightGBM is 9.75 percentage points better. The gap comes from LightGBM's ability to learn combinations of features, something Linear Regression cannot do. LightGBM was used to generate the final Kaggle submission.
 
 ---
