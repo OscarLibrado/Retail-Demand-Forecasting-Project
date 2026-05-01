@@ -65,6 +65,15 @@ Sales were split into four groups based on daily volume:
 Each group has roughly the same number of rows, which makes comparisons fair.
 
 Five charts compare how each feature distributes across the four groups:
+<img width="1520" height="570" alt="Image" src="https://github.com/user-attachments/assets/9ef9d5f2-d43e-49f4-bf56-46eb9379db89" />
+
+<img width="1516" height="570" alt="Image" src="https://github.com/user-attachments/assets/bdbc39b3-ac24-4b51-aa9d-2008c39e62f6" />
+
+<img width="1490" height="576" alt="Image" src="https://github.com/user-attachments/assets/14199b09-85ad-4ce9-94f7-56b59e5b57e7" />
+
+<img width="1494" height="572" alt="Image" src="https://github.com/user-attachments/assets/3746eacd-8daa-4c81-9fcd-0093dabaa6a5" />
+
+<img width="1512" height="574" alt="Image" src="https://github.com/user-attachments/assets/4ed0159a-057f-4fb1-bd12-a5cd51255dd5" />
 
 **Month**: The clearest pattern. High sales bunch up in June, July, and August. Low sales dominate in January and February. Month is the strongest single predictor.
 
